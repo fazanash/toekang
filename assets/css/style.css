@@ -1,0 +1,92 @@
+/* NOTE: This CSS is setted for Mobile First */
+
+/* ===== Google Fonts ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+
+/* ===== Variable CSS ===== */
+:root {
+    /* ----- Colours ----- */
+    --brand-normal: #FD4A4A;
+    --brand-hover: #CB3E3E;
+    --brand-accent: #FC6849;
+    --text-heading: #274052;
+    --text-content: #434a4e;
+    --text-light: #F9FAFA;
+    --body-color: #F6F8FD;
+    /* ----- Font and Typography ----- */
+    --body-font: 'Poppins', sans-serif;
+    /* ----- Font Weight ----- */
+    --font-bold: 700;
+    --font-medium: 500;
+    --font-reguler: 300;
+    --font-light: 200;
+}
+/* ===== Base ===== */
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-content);
+}
+h1, h2, ul, p {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Restyling Bootstrap CSS ===== */
+.navbar-collapse {
+    flex-grow: 0;
+}
+.navbar-toggler, .navbar-toggler:focus {
+    border-color: transparent !important;
+    box-shadow: 0 0 0 rgba(0,0,0,.0) !important;
+}
+header li {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Custom Style by Fazanash ===== */
+.btn-tkg {
+    padding: 16px 24px;
+    border-radius: 16px;
+}
+.btn-tkg-border {
+    border: 1px solid var(--brand-normal);
+}
+
+/* ===== This Setting is Used for Tablet ===== */
+@media (min-width:360px) {
+
+}
+
+/* ===== This Setting is Used for Landscape Tablet ===== */
+@media (min-width:768px) {
+
+}
+
+/* ===== This Setting is Used for Dekstop ===== */
+@media (min-width:1200px) {
+
+}
+
+/* ===== This Setting is Used for Widescreen ===== */
+@media (min-width:1920px) {
+
+}
