@@ -1,84 +1,220 @@
 /* NOTE: This CSS is setted for Mobile First */
 
 /* ===== Google Fonts ==== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-/* ===== Variable CSS ===== */
-:root {
-    /* ----- Colours ----- */
-    --brand-normal: #FD4A4A;
-    --brand-hover: #CB3E3E;
-    --brand-accent: #FC6849;
-    --text-heading: #274052;
-    --text-content: #434a4e;
-    --text-light: #F9FAFA;
-    --body-color: #F6F8FD;
-    /* ----- Font and Typography ----- */
-    --body-font: 'Poppins', sans-serif;
-    /* ----- Font Weight ----- */
-    --font-bold: 700;
-    --font-medium: 500;
-    --font-reguler: 300;
-    --font-light: 200;
-}
-/* ===== Base ===== */
-*, ::before, ::after {
-    box-sizing: border-box;
-    padding: 0;
-}
-body {
-    margin: 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-content);
-}
-h1, h2, ul, p {
-    margin: 0;
-}
-ul {
-    padding: 0;
-    list-style: none;
-}
-a {
-    text-decoration: none;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* ===== Statr: Variable CSS ===== */
+    :root {
+        /* ----- Colours ----- */
+        --brand-normal: #FD4A4A;
+        --brand-hover: #CB3E3E;
+        --brand-accent: #FC6849;
+        --text-heading: #274052;
+        --text-content: #434a4e;
+        --text-light: #F9FAFA;
+        --body-color: #F6F8FD;
+        --element-color: #eff4fd;
+        --shadow: rgba(252, 210, 210, 0.123);
+        /* ----- Font and Typography ----- */
+        --body-font: 'Poppins', sans-serif;
+        --title-font-size: 4.5rem;
+        --big-font-size: 4rem;
+        --medium-font-size: 3rem;
+        --small-font-size: 3rem;
+        --smaller-font-size: 2.5rem;
+        --smallest-font-size: 2rem;
+        --body-font-size: 1rem;
+        /* ----- Font Weight ----- */
+        --font-bold: 700;
+        --font-medium: 500;
+        --font-reguler: 400;
+        --font-light: 300;
+    }
+/* ===== End: Variable CSS ===== */
 
-/* ===== Restyling Bootstrap CSS ===== */
-.navbar-collapse {
-    flex-grow: 0;
-}
-.navbar-toggler, .navbar-toggler:focus {
-    border-color: transparent !important;
-    box-shadow: 0 0 0 rgba(0,0,0,.0) !important;
-}
-header li {
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-}
+/* ===== Start: Base ===== */
+    *, ::before, ::after {
+        box-sizing: border-box;
+        padding: 0;
+    }
+    body {
+        margin: 0;
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+        background-color: var(--body-color);
+        color: var(--text-content);
+    }
+    h1, h2, h3, h4, h5, h6, ul, p {
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: var(--big-font-size);
+        font-weight: var(--font-bold);
+        color: var(--text-heading);
+    }
+    h2 {
+        font-size: var(--medium-font-size);
+        font-weight: var(--font-bold);
+        color: var(--text-heading);
+    }
+    h3 {
+        font-size: var(--body-font-size);
+        font-weight: var(--font-light);
+        color: var(--text-heading);
+    }
+    h4 {
+        font-size: var(--smaler-font-size);
+        font-weight: var(--font-bold);
+        color: var(--text-heading);
+    }
+    h5 {
+        font-size: var(--smallest-font-size);
+        font-weight: var(--font-bold);
+        color: var(--text-heading);
+    }
+    h6 {
+        font-size: var(--body-font-size);
+        font-weight: var(--font-bold);
+        color: var(--text-heading);
+    }
+    p {
+        font-size: var(--body-font-size);
+        font-weight: var(--font-reguler);
+        color: var(--text-content);
+        margin-bottom: 16px;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+/* ===== End: Base ===== */
 
-/* ===== Custom Style by Fazanash ===== */
-.btn-tkg {
-    padding: 16px 24px;
-    border-radius: 16px;
-}
-.btn-tkg-border {
-    border: 1px solid var(--brand-normal);
-}
+/* ===== Start: Restyling Bootstrap CSS ===== */
+    /* ----- Start: Header ----- */
+    .navbar-collapse {
+        flex-grow: 0;
+        margin: 16px;
+        background-color: var(--element-color);
+        border-radius: 16px;
+    }
+    .navbar-toggler, .navbar-toggler:focus {
+        border-color: transparent !important;
+        box-shadow: 0 0 4px 100px rgba(0,0,0,.0) !important;
+    }
+    header li {
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-link:hover, .nav-link.active {
+        color: var(--brand-normal) !important;
+    }
+    /* ----- End: Header ----- */
+/* ===== End: Restyling Bootstrap CSS ===== */
 
-/* ===== This Setting is Used for Tablet ===== */
-@media (min-width:360px) {
+/* ===== Start: Custom Style by Fazanash ===== */
+    /* ----- Start: Button Toekang ----- */
+    .btn-tkg {
+        padding: 16px 24px;
+        border-radius: 16px;
+    }
+    .btn-tkg-border {
+        border: 1px solid var(--brand-normal);
+        color: var(--text-heading);
+    }
+    .btn-tkg-border:hover {
+        border: 1px solid var(--brand-normal);
+        background-color: var(--brand-normal);
+        color: var(--text-light);
+        box-shadow: 4px 4px 2px 16px var(--shadow);
+    }
+    .btn-tkg-filled {
+        background-color: var(--brand-normal);
+        color: var(--text-light);
+    }
+    .btn-tkg-filled:hover {
+        background-color: var(--brand-hover);
+        color: var(--text-light);
+    }
+    /* ----- End: Button Toekang ----- */
 
+    /* ----- Start: Container ----- */
+    .container-tkg {
+        padding: 96px 0;
+        display: flex;
+    }
+    /* ----- End: Container ----- */
+
+    /* ----- Start: Heading ----- */
+    .left {
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+    }
+    .divider {
+        background-color: var(--brand-normal);
+        height: 3px;
+        width: 30px;
+        border-radius: 50px;
+        display: inline-block;
+    }
+    .sub-title {
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        display: inline-block;
+        padding: 8px;
+    }
+    /* ----- End: Heading ----- */
+
+    /* ----- Start:  */
+
+    /* ----- End: */
+
+/* ===== End: Custom Style by Fazanash ===== */
+
+/* ===== Start: Tablet ===== */
+@media (min-width:361px) {
+    /* ----- Start: Restyling Bootstrap CSS ----- */
+    .navbar-collapse {
+        background-color: transparent;
+    }
+    header li {
+        padding: 16px 24px;
+        position: relative;
+    }
+    header .nav-item:hover a::after {
+        position: absolute;
+        border-radius: 50px;
+        left: 45%;
+        bottom: 24%;
+        content: "";
+        width: 15px;
+        height: 3px;
+        background-color: var(--brand-normal);
+    }
 }
+/* ===== End: Tablet ===== */
 
 /* ===== This Setting is Used for Landscape Tablet ===== */
 @media (min-width:768px) {
-
+    /* ----- Start: Root ----- */
+    /* --title-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --medium-font-size: 3rem;
+    --small-font-size: 2.5rem;
+    --smaller-font-size: 2rem;
+    --smallest-font-size: 1.5rem;
+    --body-font-size: 1rem; */
+    /* ----- End: Root ----- */
 }
 
 /* ===== This Setting is Used for Dekstop ===== */
