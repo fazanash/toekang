@@ -92,7 +92,6 @@
             font-weight: var(--font-light);
             color: var(--text-content);
             margin-bottom: 24px;
-            line-height: 30px;
         }
         ul {
             padding: 0;
@@ -151,7 +150,7 @@
         flex-direction: column;
     }
     .container-tkg-sgl, .container-tkg-dbl.container-not-hero {
-        padding: 0 0 64px 0;
+        padding: 0 20px 64px 20px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -167,12 +166,12 @@
         justify-content: center;
         align-items: center;
     }
-    .sigle-column .heading {
-        padding: 64px 0;
+    .container-not-hero .heading {
+        padding: 0 0 24px 0;
         text-align: center;
     }
     .title.not-hero {
-        font-size: var(--medium-font-size);
+        font-size: var(--small-font-size);
     }
     .sub-title {
         text-transform: uppercase;
@@ -195,6 +194,9 @@
         left: -35px;
         bottom: 50%;
         background-color: var(--brand-normal);
+    }
+    .description {
+        line-height: 30px;
     }
     /* ----- End: Heading ----- */
 
@@ -257,6 +259,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-basis: 50%;
     }
     .card {
         background-color: var(--element-color);
@@ -288,7 +291,7 @@
     }
     /* ----- End: Skills ----- */
 
-    /* ----- Start: Video ----- */
+    /* ----- Start: Profile ----- */
     .video  {
         display: flex;
         flex-direction: column;
@@ -297,29 +300,39 @@
         position: relative;
     }
     .tv-mask {
-        width: 330px;
+        width: 100%;
     }
     .cover  {
         position: absolute;
-        overflow: hidden;
-        top: 8px;
-        height: 175px;
-        width: 85%;
+        top: 3%;
+        height: 170px;
+        width: 95%;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+    .cover .imagery-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+    }
     .cover .cover-img {
-        height: 250px;
+        width: 100%;
     }
     .cover-overlay {
-        height: 175px;
-        width: 310px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
         background-image: linear-gradient(45deg, var(--brand-normal), var(--brand-accent));
         opacity: 0.5;
         z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .video button .bi {
         color: var(--text-light);
@@ -328,13 +341,13 @@
     .video .btn:hover, .video .btn:focus {
         border: none;
     }
-    /* ----- End: Video ----- */
+    /* ----- End: Profile ----- */
 /* ===== END: SECTIONS ===== */
 /* END: FOR MOBILE DESIGN */
 
 /* ===== Start: Potrait Tablet ===== */
 @media (min-width:361px) {
-    /* ----- Start: Restyling Bootstrap CSS ----- */
+    /* ----- Start: Header ----- */
     .navbar-collapse {
         background-color: transparent;
         position: unset;
@@ -354,6 +367,23 @@
         height: 3px;
         background-color: var(--brand-normal);
     }
+    /* ----- End: Header ----- */
+
+    /* ----- Start: Profile ----- */
+    .tv-mask {
+        width: 100%;
+    }
+    .cover  {
+        border-radius: 8px;
+        top: 20%;
+    }
+    .cover .imagery-wrapper {
+        width: 96%;
+    }
+    .cover .cover-img {
+        width: 100%;
+    }
+    /* ----- End: Profile ----- */
 }
 /* ===== End: Potrait Tablet ===== */
 
@@ -362,15 +392,28 @@
     /* ===== START:  SECTIONS ===== */
         /* ----- Start: Skills ----- */
         .double-column.skills-detail {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
-            flex-basis: 100%;
+            flex-basis: 50%;
         }
         .double-column.skills-detail .first, .double-column.skills-detail .second {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
         /* ----- End: Skills ----- */
+
+        /* ----- Start: Profile ----- */
+        .tv-mask {
+            width: 90%;
+        }
+        .cover  {
+            top: 24%;
+        }
+        .cover .imagery-wrapper {
+            width: 90%;
+        }
+        /* ----- End: Profile ----- */
     /* ===== END: SECTIONS ===== */
 }
 /*  ===== End: Landscape Tablet ===== */
@@ -385,49 +428,46 @@
             --medium-font-size: 4rem;
             --small-font-size: 3.5rem;
             --smaller-font-size: 3rem;
-            --smallest-font-size: 2.5rem;
-            --body-font-size: 1.5rem;
+            --smallest-font-size: 1.5rem;
+            --body-font-size: 1.4rem;
         }
         /* ----- End: Root ----- */
 
         /* ----- Start: Container ----- */
-        .container-tkg-dbl {
-            padding: 0 0 128px 0;
+        .container-tkg-sgl, .container-tkg-dbl.container-not-hero, .container-tkg-dbl.hero {
+            padding: 0 20px 128px 20px;
             flex-direction: row;
+            align-items: center;
+            text-align: left;
         }
-        .container-tkg-sgl {
-            padding: 0 0 128px 0;
+        .container .double-column {
+            flex-basis: 50%;
         }
         /* ----- End: Container ----- */
 
         /* ----- Start: Heading ----- */
-        .double-column {
+        .container-tkg-dbl {
             justify-content: center;
             align-items: center;
             flex-basis: 50%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
         }
-        .double-column .heading {
+        .container-tkg-dbl .heading {
             padding-right: 96px;
         }
-        .single-column .heading {
+        .container-not-hero .heading {
             padding: 0 0 96px 0;
-            text-align: center;
+            text-align: left;
+        }
+        .description {
+            line-height: 40px;
         }
         /* ----- End: Heading ----- */
     /* ===== END: BASE ===== */
 
     /* ====== START: SECTIONS ===== */
         /* ---- Start: Hero ----- */
-        .description {
-            font-size: 22px;
-            line-height: 40px;
-        }
-        .hero-image {
-            position: relative;
-            padding-top: 24px;
-        }
         .ornament {
             position: absolute;
             width: 40%;
@@ -447,78 +487,24 @@
         /* ----- End: Hero ----- */
 
         /* ----- Start: Skills ----- */
-        .double-column.skills-detail {
-            flex-direction: row;
-            justify-content: space-between;
-            flex-basis: 60%;
-        }
-        .double-column.skills-detail .first, .double-column.skills-detail .second {
-            display: flex;
-            flex-direction: column;
-        }
-        .double-column.skills-detail .second {
-            margin-top: 4rem;
-        }
         .card {
-            background-color: var(--element-color);
-            padding: 48px;
-            margin: 20px;
             height: 20rem;
             width: 20rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border: none;
-            border-radius: 16px;
-            transform: translateY(0);
-            transition-duration: 1.5s;
-        }
-        .card:hover {
-            transform: translateY(-25px);
-        }
-        .card-body {
-            padding: 0;
-        }
-        .card img {
-            width: 72px;
-            margin-bottom: 18px;
-        }
-        .card-text {
-            font-size: 18px;
         }
         /* ----- End: Skills ----- */
-        
-        /* ----- Start: Video ----- */
-        .video  {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+
+        /* ----- Start: Profile ----- */
+        .tv-mask {
+            width: 100%;
         }
-        .cover, .cover-overlay {
-            position: absolute;
-            top: 10px;
-            height: 415px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cover  {
+            top: 24%;
         }
-        .cover-overlay {
-            height: 415px;
-            width: 730px;
-            background-image: linear-gradient(45deg, var(--brand-normal), var(--brand-accent));
-            opacity: 0.5;
+        .cover .imagery-wrapper {
+            width: 75%;
         }
-        .video button .bi {
-            color: var(--text-light);
-            font-size: var(--medium-font-size);
-        }
-        .video .btn:hover, .video .btn:focus {
-            border: none;
-        }
-        /* ----- End: Video ----- */
+        /* ----- End: Profile ----- */
+
     /* ===== END: SECTIONS ===== */
 }
 /* ===== End: Dekstop ===== */
