@@ -148,7 +148,7 @@
 /* ===== START: BASE CUSTOM CSS BY FAZANASH ===== */
     /* ----- Start: Container ----- */
     .container-tkg-dbl {
-        padding: 64px 20px;
+        padding: 24px 20px 64px;
         display: flex;
         flex-direction: column;
     }
@@ -416,6 +416,8 @@
         border-radius: 10px;
     }
     /* ----- End: Testimonial ----- */
+
+    /* ----- Start: Blog ----- */
     .blogs {
         display: flex;
         flex-direction: column;
@@ -423,7 +425,7 @@
         align-items: center;
     }
     .blogs .item {
-        width: 365px;
+        width: 325px;
         margin-bottom: 32px;
     }
     .blogs .item .thumbnail {
@@ -461,9 +463,119 @@
         letter-spacing: 2px;
         color: var(--brand-normal);
     }
-    /* ----- Start: Blog ----- */
-
     /* ----- End: Blog ----- */
+
+    /* ----- Start: Subscribe ----- */
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .subscribe .single-column {
+        background-color: var(--brand-normal);
+        background-image: url(/assets/img/abstract/line-bg.svg);
+        background-position: center;
+        background-size: cover;
+        padding: 24px;
+        border-radius: 16px;
+    }
+    .subscribe .single-column .subscribe-title {
+        color: var(--text-light);
+        font-size: var(--small-font-size);
+        margin-bottom: 32px;
+    }
+    .subscribe .single-column .input-group {
+        display: flex;
+        flex-direction: row;
+        padding: 16px;
+        background-color: var(--element-color);
+        border-radius: 16px;
+    }
+    .subscribe .single-column .input-group input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+    .subscribe .single-column .input-group .btn-sub {
+        background-color: var(--brand-normal);
+        color: var(--text-light);
+        border-radius: 16px !important;
+        padding: 16px 24px;
+    }
+    /* ----- End: Subscribe ----- */
+
+    /* ----- Start: Footer ----- */
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    footer .identity {
+        padding: 0 0 20px 0;
+    }
+    footer .contact {
+        padding: 8px 0;
+    }
+    footer p {
+        margin-bottom: 8px;
+    }
+    footer .navigation .item {
+        padding-bottom: 24px;
+    }
+    footer .navigation .item .title {
+        margin-bottom: 8px;
+    }
+    footer .navigation .item li {
+        margin-bottom: 8px;
+    }
+    footer .navigation .item a {
+        color: var(--text-content);
+        font-weight: var(--font-light);
+    }
+    footer .navigation .item a:hover {
+        color: var(--brand-normal);
+    }
+    footer .bottom {
+        text-align: center;
+    }
+    footer .bottom p {
+        font-size: 14px;
+    }
+    .download {
+        background-color: var(--text-heading);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .download .media {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 24px;
+    }
+    .download .name {
+        padding-bottom: 8px;
+    }
+    .download .media .bi {
+        padding: 0 8px;
+        color: var(--text-light);
+    }
+    .download p, .download a {
+        margin: 0 8px 0 0;
+        color: var(--text-light);
+        font-size: 14px;
+    }
+    .download .btn, .download .btn:hover {
+        border: 1px solid var(--element-color);
+        color: var(--text-light);
+        border-radius: 8px;
+    }
+    /* ----- End: Footer */
 /* ===== END: SECTIONS ===== */
 /* END: FOR MOBILE DESIGN */
 
@@ -551,6 +663,61 @@
             width: 220px;
         }
         /* ----- End: Blog ----- */
+
+        /* ----- Start: Subscribe ----- */
+        .subscribe .single-column {
+            width: 650px;
+            padding: 40px;
+        }
+        .subscribe .single-column .input-group {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+            background-color: var(--element-color);
+            border-radius: 16px;
+        }
+        .subscribe .single-column .input-group input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+        .subscribe .single-column .input-group .btn-sub {
+            background-color: var(--brand-normal);
+            color: var(--text-light);
+            border-radius: 16px !important;
+            padding: 16px 24px;
+        }
+        /* ----- End: Subscribe ----- */
+        footer .top {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+        footer .top .navigation {
+            display: flex;
+            justify-content: space-between;
+        }
+        footer .top .navigation .item {
+            flex-basis: 50%;
+        }
+        .download {
+            padding: 24px;
+            flex-direction: row;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .download .media {
+            flex-direction: row;
+            padding-bottom: 0;
+        }
+        .download .name {
+            padding-bottom: 0;
+        }
+        /* ----- Start: Footer ----- */
+        /* ----- End: Footer ----- */
     /* ===== END: SECTIONS ===== */
 }
 /*  ===== End: Landscape Tablet ===== */
@@ -566,7 +733,7 @@
             --small-font-size: 3.5rem;
             --smaller-font-size: 3rem;
             --smallest-font-size: 1.5rem;
-            --body-font-size: 1.2rem;
+            --body-font-size: 1rem;
         }
         /* ----- End: Root ----- */
 
@@ -600,12 +767,13 @@
             font-size: var(--medium-font-size);
         }
         .description {
+            font-size: var(--smallest-font-size);
             line-height: 40px;
         }
         /* ----- End: Heading ----- */
     /* ===== END: BASE ===== */
 
-    /* ====== START: SECTIONS ===== */
+    /* ===== START: SECTIONS ===== */
         /* ----- Start: Header ----- */
         .navbar-collapse {
             background-color: transparent;
@@ -682,6 +850,31 @@
             width: 400px;
         }
         /* ----- End: Blog ----- */
+
+        /* ----- Start: Subscribe ----- */
+        .subscribe .single-column {
+            width: 900px;
+            padding: 48px;
+        }
+        /* ----- End: Subscribe ----- */
+
+        /* ----- Start: Footer ----- */
+        footer .top {
+            flex-direction: row;
+            width: 100%;
+            text-align: left;
+            padding: 0 0 64px 0;
+        }
+        footer .top .identity {
+            flex-basis: 25%;
+        }
+        footer .top .navigation {
+            flex-basis: 40%;
+        }
+        footer .bottom .copyright {
+            font-size: var(--body-font-size);
+        }
+        /* ----- End: Footer ----- */
     /* ===== END: SECTIONS ===== */
 }
 /* ===== End: Dekstop ===== */
