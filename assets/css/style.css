@@ -3,107 +3,129 @@
 /* ===== Google Fonts ==== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-/* ===== Statr: Variable CSS ===== */
-    :root {
-        /* ----- Colours ----- */
-        --brand-normal: #FD4A4A;
-        --brand-hover: #CB3E3E;
-        --brand-accent: #FC6849;
-        --text-heading: #274052;
-        --text-content: #434a4e;
-        --text-light: #F9FAFA;
-        --body-color: #F6F8FD;
-        --element-color: #eff4fd;
-        --shadow: rgba(252, 210, 210, 0.123);
-        /* ----- Font and Typography ----- */
-        --body-font: 'Poppins', sans-serif;
-        --title-font-size: 4.5rem;
-        --big-font-size: 4rem;
-        --medium-font-size: 3rem;
-        --small-font-size: 3rem;
-        --smaller-font-size: 2.5rem;
-        --smallest-font-size: 2rem;
-        --body-font-size: 1rem;
-        /* ----- Font Weight ----- */
-        --font-bold: 700;
-        --font-medium: 500;
-        --font-reguler: 400;
-        --font-light: 300;
-    }
-/* ===== End: Variable CSS ===== */
+/* START FOR MOBILE DESIGN */
+/* ===== START: ROTE */
+    /* ----- Start: Variable CSS ----- */
+        :root {
+            /* ----- Colours ----- */
+            --brand-normal: #FD4A4A;
+            --brand-hover: #CB3E3E;
+            --brand-accent: #FC6849;
+            --text-heading: #274052;
+            --text-content: #434a4e;
+            --text-light: #F9FAFA;
+            --body-color: #F6F8FD;
+            --element-color: #eff4fd;
+            --shadow: rgba(252, 210, 210, 0.123);
+            /* ----- Font and Typography ----- */
+            --body-font: 'Poppins', sans-serif;
+            --title-font-size: 3.5rem;
+            --big-font-size: 3rem;
+            --medium-font-size: 2.5rem;
+            --small-font-size: 2rem;
+            --smaller-font-size: 1.5rem;
+            --smallest-font-size: 1.2rem;
+            --body-font-size: 1rem;
+            /* ----- Font Weight ----- */
+            --font-bold: 700;
+            --font-medium: 500;
+            --font-reguler: 400;
+            --font-light: 300;
+        }
+    /* ----- End: Variable CSS */
 
-/* ===== Start: Base ===== */
-    *, ::before, ::after {
-        box-sizing: border-box;
-        padding: 0;
-    }
-    body {
-        margin: 0;
-        font-family: var(--body-font);
-        font-size: var(--normal-font-size);
-        background-color: var(--body-color);
-        color: var(--text-content);
-    }
-    h1, h2, h3, h4, h5, h6, ul, p {
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        font-size: var(--big-font-size);
-        font-weight: var(--font-bold);
-        color: var(--text-heading);
-    }
-    h2 {
-        font-size: var(--medium-font-size);
-        font-weight: var(--font-bold);
-        color: var(--text-heading);
-    }
-    h3 {
-        font-size: var(--body-font-size);
-        font-weight: var(--font-light);
-        color: var(--text-heading);
-    }
-    h4 {
-        font-size: var(--smaler-font-size);
-        font-weight: var(--font-bold);
-        color: var(--text-heading);
-    }
-    h5 {
-        font-size: var(--smallest-font-size);
-        font-weight: var(--font-bold);
-        color: var(--text-heading);
-    }
-    h6 {
-        font-size: var(--body-font-size);
-        font-weight: var(--font-bold);
-        color: var(--text-heading);
-    }
-    p {
-        font-size: var(--body-font-size);
-        font-weight: var(--font-reguler);
-        color: var(--text-content);
-        margin-bottom: 16px;
-    }
-    ul {
-        padding: 0;
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-/* ===== End: Base ===== */
+    /* ----- Start: Starter ----- */
+        *, ::before, ::after {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            font-family: var(--body-font);
+            font-size: var(--normal-font-size);
+            background-color: var(--body-color);
+            color: var(--text-content);
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, h5, h6, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: var(--title-font-size);
+            font-weight: var(--font-bold);
+            color: var(--text-heading);
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: var(--big-font-size);
+            font-weight: var(--font-bold);
+            color: var(--text-heading);
+            margin-bottom: 16px;
+        }
+        h3 {
+            font-size: var(--body-font-size);
+            font-weight: var(--font-light);
+            color: var(--text-heading);
+            margin-bottom: 16px;
+        }
+        h4 {
+            font-size: var(--smaler-font-size);
+            font-weight: var(--font-bold);
+            color: var(--text-heading);
+            margin-bottom: 16px;
+        }
+        h5 {
+            font-size: var(--smallest-font-size);
+            font-weight: var(--font-bold);
+            color: var(--text-heading);
+            margin-bottom: 16px;
+        }
+        h6 {
+            font-size: var(--body-font-size);
+            font-weight: var(--font-bold);
+            color: var(--text-heading);
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: var(--body-font-size);
+            font-weight: var(--font-light);
+            color: var(--text-content);
+            margin-bottom: 24px;
+            line-height: 30px;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    /* ----- End: Starter */
+/* ===== END: ROOT ===== */
 
-/* ===== Start: Restyling Bootstrap CSS ===== */
+/* ===== START: RESTYLING BOOTSTRAP CSS ===== */
     /* ----- Start: Header ----- */
+    .header header .dropdown-wrapper {
+        position: relative;
+    }
+    .navbar .container {
+        background-color: var(--body-color);
+    }
     .navbar-collapse {
         flex-grow: 0;
         margin: 16px;
         background-color: var(--element-color);
         border-radius: 16px;
+        position: absolute;
+        top: 64px;
+        left: -10px;
+        width: 95%;
+        z-index: 99;
     }
     .navbar-toggler, .navbar-toggler:focus {
         border-color: transparent !important;
@@ -119,9 +141,63 @@
         color: var(--brand-normal) !important;
     }
     /* ----- End: Header ----- */
-/* ===== End: Restyling Bootstrap CSS ===== */
+/* ===== END: RESTYLING BOOTSTARP CSS ===== */
 
-/* ===== Start: Custom Style by Fazanash ===== */
+/* ===== START: BASE CUSTOM CSS BY FAZANASH ===== */
+    /* ----- Start: Container ----- */
+    .container-tkg-dbl {
+        padding: 32px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .container-tkg-sgl, .container-tkg-dbl.container-not-hero {
+        padding: 0 0 64px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    /* ----- End: Container ----- */
+
+    /* ----- Start: Heading ----- */
+    .container.hero .double-column {
+        padding-bottom: 24px;
+    }
+    .double-column {
+        justify-content: center;
+        align-items: center;
+    }
+    .sigle-column .heading {
+        padding: 64px 0;
+        text-align: center;
+    }
+    .title.not-hero {
+        font-size: var(--medium-font-size);
+    }
+    .sub-title {
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        display: inline-block;
+        padding: 8px;
+        position: relative;
+        color: var(--brand-normal);
+    }
+    .sub-title.line {
+        margin-left: 35px;
+        color: var(--text-heading);
+    }
+    .sub-title.line::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        border-radius: 50px;
+        left: -35px;
+        bottom: 50%;
+        background-color: var(--brand-normal);
+    }
+    /* ----- End: Heading ----- */
+
     /* ----- Start: Button Toekang ----- */
     .btn-tkg {
         padding: 16px 24px;
@@ -146,47 +222,124 @@
         color: var(--text-light);
     }
     /* ----- End: Button Toekang ----- */
+/* ===== END: BASE CUSTOM CSS BY FAZANASH ===== */
 
-    /* ----- Start: Container ----- */
-    .container-tkg {
-        padding: 96px 0;
-        display: flex;
+/* ===== START: SECTIONS ===== */
+    /* ----- Start: Hero ----- */
+    .hero-image {
+        position: relative;
+        padding-top: 24px;
     }
-    /* ----- End: Container ----- */
+    .ornament {
+        position: absolute;
+        width: 50%;
+    }
+    .ornament.first {
+        left: 0;
+        width: 35%;
+    }
+    .ornament.second {
+        right: -20px;
+    }
+    .ornament.third {
+        left: 0;
+        bottom: -25px;
+    }
+    /* ----- End: Hero ----- */
 
-    /* ----- Start: Heading ----- */
-    .left {
+    /* ----- Start: Skills ----- */
+    .double-column.skills-detail {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 60%;
+    }
+    .double-column.skills-detail .first, .double-column.skills-detail .second {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        background-color: var(--element-color);
+        padding: 48px;
+        margin: 20px;
+        height: 85%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        border-radius: 16px;
+        transform: translateY(0);
+        transition-duration: 1.5s;
+        text-align: left;
+    }
+    .card:hover {
+        transform: translateY(-25px);
+    }
+    .card-body {
+        padding: 0;
+    }
+    .card img {
+        width: 72px;
+        margin-bottom: 24px;
+    }
+    .card-text {
+        font-size: 16px;
+    }
+    /* ----- End: Skills ----- */
+
+    /* ----- Start: Video ----- */
+    .video  {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-basis: 50%;
+        position: relative;
     }
-    .divider {
-        background-color: var(--brand-normal);
-        height: 3px;
-        width: 30px;
-        border-radius: 50px;
-        display: inline-block;
+    .tv-mask {
+        width: 330px;
     }
-    .sub-title {
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        display: inline-block;
-        padding: 8px;
+    .cover  {
+        position: absolute;
+        overflow: hidden;
+        top: 8px;
+        height: 175px;
+        width: 85%;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    /* ----- End: Heading ----- */
+    .cover .cover-img {
+        height: 250px;
+    }
+    .cover-overlay {
+        height: 175px;
+        width: 310px;
+        background-image: linear-gradient(45deg, var(--brand-normal), var(--brand-accent));
+        opacity: 0.5;
+        z-index: 50;
+    }
+    .video button .bi {
+        color: var(--text-light);
+        font-size: var(--medium-font-size);
+    }
+    .video .btn:hover, .video .btn:focus {
+        border: none;
+    }
+    /* ----- End: Video ----- */
+/* ===== END: SECTIONS ===== */
+/* END: FOR MOBILE DESIGN */
 
-    /* ----- Start:  */
-
-    /* ----- End: */
-
-/* ===== End: Custom Style by Fazanash ===== */
-
-/* ===== Start: Tablet ===== */
+/* ===== Start: Potrait Tablet ===== */
 @media (min-width:361px) {
     /* ----- Start: Restyling Bootstrap CSS ----- */
     .navbar-collapse {
         background-color: transparent;
-    }
+        position: unset;
+        width: unset;
+}
     header li {
         padding: 16px 24px;
         position: relative;
@@ -202,27 +355,176 @@
         background-color: var(--brand-normal);
     }
 }
-/* ===== End: Tablet ===== */
+/* ===== End: Potrait Tablet ===== */
 
-/* ===== This Setting is Used for Landscape Tablet ===== */
+/* ===== Start: Landscape Tablet ===== */
 @media (min-width:768px) {
-    /* ----- Start: Root ----- */
-    /* --title-font-size: 4.5rem;
-    --big-font-size: 4rem;
-    --medium-font-size: 3rem;
-    --small-font-size: 2.5rem;
-    --smaller-font-size: 2rem;
-    --smallest-font-size: 1.5rem;
-    --body-font-size: 1rem; */
-    /* ----- End: Root ----- */
+    /* ===== START:  SECTIONS ===== */
+        /* ----- Start: Skills ----- */
+        .double-column.skills-detail {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-basis: 100%;
+        }
+        .double-column.skills-detail .first, .double-column.skills-detail .second {
+            display: flex;
+            flex-direction: row;
+        }
+        /* ----- End: Skills ----- */
+    /* ===== END: SECTIONS ===== */
 }
+/*  ===== End: Landscape Tablet ===== */
 
-/* ===== This Setting is Used for Dekstop ===== */
+/* ===== Start: Dekstop ===== */
 @media (min-width:1200px) {
+    /* ===== START: BASE ===== */
+        /* ----- Start: Root ----- */
+        :root {
+            --title-font-size: 5rem;
+            --big-font-size: 4.5rem;
+            --medium-font-size: 4rem;
+            --small-font-size: 3.5rem;
+            --smaller-font-size: 3rem;
+            --smallest-font-size: 2.5rem;
+            --body-font-size: 1.5rem;
+        }
+        /* ----- End: Root ----- */
 
+        /* ----- Start: Container ----- */
+        .container-tkg-dbl {
+            padding: 0 0 128px 0;
+            flex-direction: row;
+        }
+        .container-tkg-sgl {
+            padding: 0 0 128px 0;
+        }
+        /* ----- End: Container ----- */
+
+        /* ----- Start: Heading ----- */
+        .double-column {
+            justify-content: center;
+            align-items: center;
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .double-column .heading {
+            padding-right: 96px;
+        }
+        .single-column .heading {
+            padding: 0 0 96px 0;
+            text-align: center;
+        }
+        /* ----- End: Heading ----- */
+    /* ===== END: BASE ===== */
+
+    /* ====== START: SECTIONS ===== */
+        /* ---- Start: Hero ----- */
+        .description {
+            font-size: 22px;
+            line-height: 40px;
+        }
+        .hero-image {
+            position: relative;
+            padding-top: 24px;
+        }
+        .ornament {
+            position: absolute;
+            width: 40%;
+        }
+        .ornament.first {
+            left: 0;
+            width: 25%;
+        }
+        .ornament.second {
+            right: -60px;
+            top: 100px;
+        }
+        .ornament.third {
+            left: 0;
+            bottom: -25px;
+        }
+        /* ----- End: Hero ----- */
+
+        /* ----- Start: Skills ----- */
+        .double-column.skills-detail {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-basis: 60%;
+        }
+        .double-column.skills-detail .first, .double-column.skills-detail .second {
+            display: flex;
+            flex-direction: column;
+        }
+        .double-column.skills-detail .second {
+            margin-top: 4rem;
+        }
+        .card {
+            background-color: var(--element-color);
+            padding: 48px;
+            margin: 20px;
+            height: 20rem;
+            width: 20rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+            border-radius: 16px;
+            transform: translateY(0);
+            transition-duration: 1.5s;
+        }
+        .card:hover {
+            transform: translateY(-25px);
+        }
+        .card-body {
+            padding: 0;
+        }
+        .card img {
+            width: 72px;
+            margin-bottom: 18px;
+        }
+        .card-text {
+            font-size: 18px;
+        }
+        /* ----- End: Skills ----- */
+        
+        /* ----- Start: Video ----- */
+        .video  {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .cover, .cover-overlay {
+            position: absolute;
+            top: 10px;
+            height: 415px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cover-overlay {
+            height: 415px;
+            width: 730px;
+            background-image: linear-gradient(45deg, var(--brand-normal), var(--brand-accent));
+            opacity: 0.5;
+        }
+        .video button .bi {
+            color: var(--text-light);
+            font-size: var(--medium-font-size);
+        }
+        .video .btn:hover, .video .btn:focus {
+            border: none;
+        }
+        /* ----- End: Video ----- */
+    /* ===== END: SECTIONS ===== */
 }
+/* ===== End: Dekstop ===== */
 
-/* ===== This Setting is Used for Widescreen ===== */
+/* ===== Start: Widescreen ===== */
 @media (min-width:1920px) {
 
 }
+/* ===== End: Widescreen ===== */

@@ -14,6 +14,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+
     <!-- Custom Style CSS -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Toekang</title>
@@ -22,7 +28,9 @@
     <div class="container header">
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid d-flex justify-content-between">
+          <div
+            class="container-fluid d-flex justify-content-between dropdown-wrapper"
+          >
             <a class="navbar-brand" href="#"
               ><img src="/assets/img/brand/logo-brand.svg" alt="logo toekang"
             /></a>
@@ -41,7 +49,7 @@
               class="collapse navbar-collapse navbar-right"
               id="navbarTogglerDemo02"
             >
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
                     >Home</a
@@ -65,41 +73,188 @@
         </nav>
       </header>
     </div>
-    <div class="container container-tkg">
-      <div class="left">
-        <div class="divider"></div>
-        <h3 class="sub-title">a team in high spirits</h3>
-        <h2 class="title">
-          Make a deal <br />
-          Start to build
-        </h2>
-        <p class="description">
-          Don't waste your time planning places and buildings of your dreams.
-          Let's make it happen with us
-        </p>
-        <a href="" class="btn btn-tkg btn-tkg-filled">Contact Us</a>
+    <!-- Hero Section Start -->
+    <div class="container container-tkg-dbl hero">
+      <div class="double-column">
+        <div class="heading">
+          <h3 class="sub-title line">a team in high spirits</h3>
+          <h2 class="title">
+            Make a deal <br />
+            Start to build
+          </h2>
+          <p class="description">
+            Don't waste your time planning places and buildings of your dreams.
+            Let's make it happen with us
+          </p>
+          <a href="" class="btn btn-tkg btn-tkg-filled"
+            >Get Started <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
       </div>
-      <div class="right">
+      <div class="double-column">
         <div class="hero-image">
-          <img class="ornament 1" src="/assets/img/hero/crane.svg" alt="" />
+          <img class="ornament first" src="/assets/img/hero/crane.svg" alt="" />
           <img
             class="main-image"
             src="/assets/img/hero/main-image.svg"
             alt=""
           />
           <img
-            class="ornament 2"
-            src="/assets/img/hero/project-count.svg"
+            class="ornament second"
+            src="/assets/img/hero/worker-count.svg"
             alt=""
           />
           <img
-            class="ornament 3"
-            src="/assets/img/hero/worker-count.svg"
+            class="ornament third"
+            src="/assets/img/hero/project-count.svg "
             alt=""
           />
         </div>
       </div>
     </div>
+    <!-- Hero Section End -->
+
+    <!-- Skills Section Start -->
+    <div class="container container-tkg-dbl container-not-hero">
+      <div class="double-column">
+        <div class="heading">
+          <h3 class="sub-title">What We Do</h3>
+          <h2 class="title not-hero">
+            Our skills and <br />
+            expertise
+          </h2>
+          <p class="description">
+            We have many of the skills <br />
+            you need
+          </p>
+        </div>
+      </div>
+      <div class="double-column skills-detail">
+        <div class="first">
+          <div class="card">
+            <img
+              src="/assets/img/services/icon-design.svg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h6 class="card-title">Design and Build</h6>
+              <p class="card-text">
+                Providing a high quality of design for you
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="/assets/img/services/icon-consultation.svg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Consultation</h5>
+              <p class="card-text">We share a lot of experience for everyone</p>
+            </div>
+          </div>
+        </div>
+        <div class="second">
+          <div class="card">
+            <img
+              src="/assets/img/services/icon-renovation.svg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Renovation</h5>
+              <p class="card-text">
+                A high precision to remake a better building
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="/assets/img/services/icon-architecture.svg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Architecture</h5>
+              <p class="card-text">Providing the best architecture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skillls Section End -->
+
+    <!-- Profile Section Start -->
+    <div class="containet container-tkg-sgl container-not-hero">
+      <div class="single-column">
+        <div class="heading">
+          <h3 class="sub-title">How we work</h3>
+          <h2 class="title not-hero">Let us show you our process</h2>
+        </div>
+        <div class="video">
+          <div class="rect one"></div>
+          <div class="tv-mask">
+            <img
+            src="/assets/img/profile/television.svg"
+            alt=""
+          />
+          </div>
+          <div class="cover">
+            <img class="cover-img" src="/assets/img/profile/cover.jpg" alt="">
+            <div class="cover-overlay"></div>
+            <!-- Button trigger modal -->
+            <button
+            type="button"
+            class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            >
+              <i class="bi bi-play-circle-fill"></i>
+            </button>
+          </div>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <iframe
+                    width="465"
+                    height="300"
+                    src="https://www.youtube.com/embed/m4ziIcbb4xI"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rect two"></div>
+          <div class="rect three"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Profile Section End -->
+
+    <!-- Testi Section  Start -->
+    <div class="containet container-tgk-sgl container-not-hero">
+      <div class="single-column">
+        <div class="heading">
+          <h3 class="sub-title">Our story</h3>
+          <h2 class="title not-hero">Happy People Say</h2>
+        </div>
+    </div>
+    <!-- Testi Section End -->
+
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
