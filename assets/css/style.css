@@ -16,6 +16,7 @@
             --text-light: #F9FAFA;
             --body-color: #F6F8FD;
             --element-color: #eff4fd;
+            --element-grey: rgb(201, 201, 201);
             --element-yellow: rgb(231, 176, 25);
             --shadow: rgba(252, 210, 210, 0.123);
             /* ----- Font and Typography ----- */
@@ -63,6 +64,7 @@
             font-weight: var(--font-bold);
             color: var(--text-heading);
             margin-bottom: 16px;
+            text-transform: capitalize;
         }
         h3 {
             font-size: var(--smallest-font-size);
@@ -346,7 +348,8 @@
         display: flex;
         flex-direction: row;
         text-align: left;
-        width: 1000px;
+        justify-content: space-between;
+        width: 1100px;
     }
     .testimonial .list {
         display: flex;
@@ -400,7 +403,7 @@
     }
     .pagination .link-page {
         display: inline-block;
-        background-color: var(--text-content);
+        background-color: var(--element-grey);
         width: 10px;
         height: 10px;
         margin: 4px;
@@ -413,6 +416,54 @@
         border-radius: 10px;
     }
     /* ----- End: Testimonial ----- */
+    .blogs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .blogs .item {
+        width: 365px;
+        margin-bottom: 32px;
+    }
+    .blogs .item .thumbnail {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .blogs .item .content {
+        padding: 24px 0 0 0;
+        text-align: left;
+    }
+    .blogs .item .content .meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 0 16px 0;
+    }
+    .blogs .item .content .meta p {
+        margin: 0;
+    }
+    .blogs .item .content .meta .divider-meta {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin: 0 12px;
+        background-color: var(--brand-normal);
+    }
+    .blogs .item .content .blog-title {
+        line-height: 32px;
+        font-size: 24px;
+        font-weight: var(--font-medium);
+    }
+    .blogs .item .content .read-more {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--brand-normal);
+    }
+    /* ----- Start: Blog ----- */
+
+    /* ----- End: Blog ----- */
 /* ===== END: SECTIONS ===== */
 /* END: FOR MOBILE DESIGN */
 
@@ -483,20 +534,23 @@
             width: 90%;
         }
         /* ----- End: Profile ----- */
+
         /* ----- Start: Testimonial ----- */
-        .testimonial {
-            display: flex;
-            flex-direction: row;
-            text-align: left;
-            width: unset;
-        }
-        .testimonial .list {
-            margin: 20px;
-        }
         .testimonial .user .user-pict img {
             width: unset;
         }
         /* ----- End: Testimonial ----- */
+
+        /* ----- Start: Blog ----- */
+        .blogs {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .blogs .item {
+            width: 220px;
+        }
+        /* ----- End: Blog ----- */
     /* ===== END: SECTIONS ===== */
 }
 /*  ===== End: Landscape Tablet ===== */
@@ -617,6 +671,17 @@
         }
         /* ----- End: Profile ----- */
 
+        /* ----- Start: Testimonial -----*/
+        .testimonial {
+            width: unset;
+        }
+        /* ----- End: Testimonial -----*/
+
+        /* ----- Start: Blog ----- */
+        .blogs .item {
+            width: 400px;
+        }
+        /* ----- End: Blog ----- */
     /* ===== END: SECTIONS ===== */
 }
 /* ===== End: Dekstop ===== */
