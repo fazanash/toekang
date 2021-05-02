@@ -16,6 +16,7 @@
             --text-light: #F9FAFA;
             --body-color: #F6F8FD;
             --element-color: #eff4fd;
+            --element-yellow: rgb(231, 176, 25);
             --shadow: rgba(252, 210, 210, 0.123);
             /* ----- Font and Typography ----- */
             --body-font: 'Poppins', sans-serif;
@@ -64,7 +65,7 @@
             margin-bottom: 16px;
         }
         h3 {
-            font-size: var(--body-font-size);
+            font-size: var(--smallest-font-size);
             font-weight: var(--font-light);
             color: var(--text-heading);
             margin-bottom: 16px;
@@ -145,7 +146,7 @@
 /* ===== START: BASE CUSTOM CSS BY FAZANASH ===== */
     /* ----- Start: Container ----- */
     .container-tkg-dbl {
-        padding: 32px 20px;
+        padding: 64px 20px;
         display: flex;
         flex-direction: column;
     }
@@ -155,16 +156,13 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        overflow: hidden;
     }
     /* ----- End: Container ----- */
 
     /* ----- Start: Heading ----- */
     .container.hero .double-column {
         padding-bottom: 24px;
-    }
-    .double-column {
-        justify-content: center;
-        align-items: center;
     }
     .container-not-hero .heading {
         padding: 0 0 24px 0;
@@ -342,32 +340,85 @@
         border: none;
     }
     /* ----- End: Profile ----- */
+
+    /* ----- Start: Testimonial ----- */
+    .testimonial {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        width: 1000px;
+    }
+    .testimonial .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 100%;
+        background-color: var(--element-color);
+        margin: 20px;
+        border-radius: 16px;
+    }
+    .testimonial .list p {
+        padding: 32px;
+    }
+    .testimonial .user {
+        display: flex;
+        flex-basis: 65%;
+    }
+    .testimonial .user .user-pict {
+        flex-basis: 30%;
+        border-radius: 0 16px 0 16px;
+        overflow: hidden;
+        height: 125px;
+    }
+    .testimonial .user .user-pict img {
+        width: 96px;
+        height: 175px;
+        object-fit: cover;
+    }
+    .testimonial .user .user-details {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .testimonial .user .user-details h6 {
+        margin-bottom: 0;
+    }
+    .testimonial .user .user-details .star .bi {
+        color: var(--element-yellow);
+    }
+    .testimonial .user .user-details .user-name {
+        font-weight: var(--font-bold);
+    }
+    .testimonial .user .user-details .user-job {
+        font-weight: var(--font-light);
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        padding: 24px;
+    }
+    .pagination .link-page {
+        display: inline-block;
+        background-color: var(--text-content);
+        width: 10px;
+        height: 10px;
+        margin: 4px;
+        border-radius: 50%;
+    }
+    .pagination .link-page.active {
+        background-color: var(--brand-normal);
+        height: 10px;
+        width: 30px;
+        border-radius: 10px;
+    }
+    /* ----- End: Testimonial ----- */
 /* ===== END: SECTIONS ===== */
 /* END: FOR MOBILE DESIGN */
 
 /* ===== Start: Potrait Tablet ===== */
 @media (min-width:361px) {
-    /* ----- Start: Header ----- */
-    .navbar-collapse {
-        background-color: transparent;
-        position: unset;
-        width: unset;
-}
-    header li {
-        padding: 16px 24px;
-        position: relative;
-    }
-    header .nav-item:hover a::after {
-        position: absolute;
-        border-radius: 50px;
-        left: 45%;
-        bottom: 24%;
-        content: "";
-        width: 15px;
-        height: 3px;
-        background-color: var(--brand-normal);
-    }
-    /* ----- End: Header ----- */
+    
 
     /* ----- Start: Profile ----- */
     .tv-mask {
@@ -389,7 +440,25 @@
 
 /* ===== Start: Landscape Tablet ===== */
 @media (min-width:768px) {
+    /* ===== START: BASE ===== */
+        /* ----- Start: Font & Typography */
+        :root {
+            /* ----- Font and Typography ----- */
+            --title-font-size: 3.5rem;
+            --big-font-size: 3rem;
+            --medium-font-size: 2.5rem;
+            --small-font-size: 2rem;
+            --smaller-font-size: 1.5rem;
+            --smallest-font-size: 1.2rem;
+            --body-font-size: .89rem;
+        }
+    /* ===== END: BASE ===== */
     /* ===== START:  SECTIONS ===== */
+        /* ----- Start: Container ----- */
+        .container-not-hero .heading {
+            padding: 0 0 48px 0;
+        }
+        /* ----- End: Container ----- */
         /* ----- Start: Skills ----- */
         .double-column.skills-detail {
             display: flex;
@@ -414,6 +483,20 @@
             width: 90%;
         }
         /* ----- End: Profile ----- */
+        /* ----- Start: Testimonial ----- */
+        .testimonial {
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            width: unset;
+        }
+        .testimonial .list {
+            margin: 20px;
+        }
+        .testimonial .user .user-pict img {
+            width: unset;
+        }
+        /* ----- End: Testimonial ----- */
     /* ===== END: SECTIONS ===== */
 }
 /*  ===== End: Landscape Tablet ===== */
@@ -429,7 +512,7 @@
             --small-font-size: 3.5rem;
             --smaller-font-size: 3rem;
             --smallest-font-size: 1.5rem;
-            --body-font-size: 1.4rem;
+            --body-font-size: 1.2rem;
         }
         /* ----- End: Root ----- */
 
@@ -438,7 +521,6 @@
             padding: 0 20px 128px 20px;
             flex-direction: row;
             align-items: center;
-            text-align: left;
         }
         .container .double-column {
             flex-basis: 50%;
@@ -456,9 +538,12 @@
         .container-tkg-dbl .heading {
             padding-right: 96px;
         }
-        .container-not-hero .heading {
+        .container-tkg-dbl.container-not-hero .heading {
             padding: 0 0 96px 0;
             text-align: left;
+        }
+        .title.not-hero {
+            font-size: var(--medium-font-size);
         }
         .description {
             line-height: 40px;
@@ -467,6 +552,28 @@
     /* ===== END: BASE ===== */
 
     /* ====== START: SECTIONS ===== */
+        /* ----- Start: Header ----- */
+        .navbar-collapse {
+            background-color: transparent;
+            position: unset;
+            width: unset;
+        }
+        header li {
+            padding: 16px 24px;
+            position: relative;
+        }
+        header .nav-item:hover a::after {
+            position: absolute;
+            border-radius: 50px;
+            left: 45%;
+            bottom: 24%;
+            content: "";
+            width: 15px;
+            height: 3px;
+            background-color: var(--brand-normal);
+        }
+        /* ----- End: Header ----- */
+        
         /* ---- Start: Hero ----- */
         .ornament {
             position: absolute;
@@ -487,6 +594,9 @@
         /* ----- End: Hero ----- */
 
         /* ----- Start: Skills ----- */
+        .skills-detail .second {
+            padding-top: 96px;
+        }
         .card {
             height: 20rem;
             width: 20rem;
@@ -495,10 +605,12 @@
 
         /* ----- Start: Profile ----- */
         .tv-mask {
+            top: 0;
             width: 100%;
         }
         .cover  {
-            top: 24%;
+            width: 75%;
+            top: 29%;
         }
         .cover .imagery-wrapper {
             width: 75%;
