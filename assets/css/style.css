@@ -44,7 +44,6 @@
         body {
             margin: 0;
             font-family: var(--body-font);
-            font-size: var(--normal-font-size);
             background-color: var(--body-color);
             color: var(--text-content);
             font-size: 16px;
@@ -97,7 +96,6 @@
             margin-bottom: 24px;
         }
         ul {
-            padding: 0;
             list-style: none;
         }
         a {
@@ -302,23 +300,30 @@
     .tv-mask {
         width: 100%;
     }
-    .cover  {
+    .video .video-play {
         position: absolute;
-        top: 3%;
-        height: 170px;
-        width: 95%;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        height: 85%;
+        width: 130%;
+        overflow: hidden;
     }
-    .cover .imagery-wrapper {
+    .video .video-play .wrapper {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
+        height: 100%;
+        width: 100%;
+    }
+    .video .video-play iframe {
+        width: 70%;
+        height: 94%;
+    }
+    #cover-video  {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 15%;
+        width: 70%;
+        height: 94%;
+        overflow: hidden;
+        z-index: 999;
     }
     .cover .cover-img {
         width: 100%;
@@ -340,6 +345,7 @@
     }
     .video .btn:hover, .video .btn:focus {
         border: none;
+        box-shadow: none;
     }
     .modal.fade {
         padding-right: 0;
@@ -598,10 +604,6 @@
     .tv-mask {
         width: 100%;
     }
-    .cover  {
-        border-radius: 8px;
-        top: 20%;
-    }
     .cover .imagery-wrapper {
         width: 96%;
     }
@@ -650,15 +652,8 @@
         .tv-mask {
             width: 90%;
         }
-        .cover  {
-            top: 24%;
-        }
-        .cover .imagery-wrapper {
-            width: 90%;
-        }
-        .modal-body iframe {
-            width: 465px;
-            height: 300px;
+        .video .video-play {
+            width: 110%;
         }
         /* ----- End: Profile ----- */
 
@@ -786,6 +781,13 @@
             line-height: 40px;
         }
         /* ----- End: Heading ----- */
+
+        /* ----- Start: Profile ----- */
+        .video .video-play {
+            height: 90%;
+            width: 80%;
+        }
+        /* -----End: Profile ----- */
     /* ===== END: BASE ===== */
 
     /* ===== START: SECTIONS ===== */
@@ -844,13 +846,6 @@
         .tv-mask {
             top: 0;
             width: 100%;
-        }
-        .cover  {
-            width: 75%;
-            top: 29%;
-        }
-        .cover .imagery-wrapper {
-            width: 75%;
         }
         /* ----- End: Profile ----- */
 

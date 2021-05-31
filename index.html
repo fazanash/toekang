@@ -31,7 +31,12 @@
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div
-            class="container-fluid d-flex justify-content-between dropdown-wrapper"
+            class="
+              container-fluid
+              d-flex
+              justify-content-between
+              dropdown-wrapper
+            "
           >
             <a class="navbar-brand" href="#"
               ><img src="/assets/img/brand/logo-brand.svg" alt="logo toekang"
@@ -200,45 +205,30 @@
           <div class="tv-mask">
             <img src="/assets/img/profile/television.svg" alt="" />
           </div>
-          <div class="cover">
-            <div class="imagery-wrapper">
-              <img
-                class="cover-img"
-                src="/assets/img/profile/cover.jpg"
-                alt=""
-              />
-              <div class="cover-overlay">
-                <!-- Button trigger modal -->
-                <button
-                  type="button"
-                  class="btn"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <i class="bi bi-play-circle-fill"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <iframe
-                    src="https://www.youtube.com/embed/m4ziIcbb4xI"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+          <div class="video-play">
+            <div class="wrapper" id="video-placeholder">
+              <iframe
+                id="youtubeVideo"
+                src="https://www.youtube.com/embed/m4ziIcbb4xI"
+                rel="0"
+                enablejsapi="1"
+                modestbranding="0"
+                controls="0"
+                frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="cover" id="cover-video">
+                <div class="cover-overlay">
+                  <button onclick="playVideo()" class="btn" id="play-video">
+                    <i class="bi bi-play-circle-fill"></i>
+                  </button>
                 </div>
+                <img
+                  class="cover-img"
+                  src="/assets/img/profile/cover.jpg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -526,6 +516,6 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
             -->
     <!-- Main JS -->
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/video.js"></script>
   </body>
 </html>
